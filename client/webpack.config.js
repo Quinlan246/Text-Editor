@@ -22,6 +22,7 @@ module.exports = () => {
 				template: './index.html',
 			}),
 			new WebpackPwaManifest({
+				inject: true,
 				name: 'JATE',
 				short_name: 'JATE',
 				description: 'Just Another Text Editor',
@@ -40,7 +41,7 @@ module.exports = () => {
 			}),
 			new InjectManifest({
 				swSrc: './src-sw.js',
-				swDest: 'service-worker.js',
+				swDest: 'src-sw.js',
 			}),
     ],
 
